@@ -6,11 +6,12 @@ public class Primenumber {
 	public static void main(String args[])
 	   {		
 		int temp;
+		int num;
 		boolean Prime=true;
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter any number:");
 		
-		int num=sc.nextInt();
+		num=sc.nextInt();
 	      
 		for(int i=2;i<=num/2;i++)
 		{
