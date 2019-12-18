@@ -12,7 +12,6 @@ public class Multidimarraydemo {
 		int marks[][][]=new int[2][2][3];
 		int year=1;
 		
-		
 		//create input stream reader object to accept data from keyboard
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		for(int i=0;i<2;i++)
