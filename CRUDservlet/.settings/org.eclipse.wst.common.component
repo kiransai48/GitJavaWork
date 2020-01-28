@@ -2,7 +2,7 @@
     <wb-module deploy-name="CRUDservlet">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="CRUDservlet"/>
         <property name="java-output-path" value="/CRUDservlet/build/classes"/>
+        <property name="context-root" value="CRUDservlet"/>
     </wb-module>
 </project-modules>

@@ -12,9 +12,9 @@ Transaction transaction = null;
 try {
 transaction = session.beginTransaction();
 Set<Phone> phoneNumbers = new HashSet<Phone>();
-phoneNumbers.add(new Phone("house","32354353"));
-phoneNumbers.add(new Phone("mobile","9889343423"));
-Student student = new Student("Eswar", phoneNumbers);
+phoneNumbers.add(new Phone("house","2354665"));
+phoneNumbers.add(new Phone("mobile","9565723655"));
+Student student = new Student("kiran", phoneNumbers);
 session.save(student);
 transaction.commit();
 } catch (HibernateException e) {

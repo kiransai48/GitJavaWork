@@ -18,11 +18,11 @@ public static void main(String[] args) {
     Transaction t=session.beginTransaction();   
       
     Employe e1=new Employe();    
-    e1.setName("Jogi");    
-    e1.setEmail("Jogi@gmail.com");    
+    e1.setName("kiran");    
+    e1.setEmail("kiran@gmail.com");    
         
     Address address1=new Address();    
-    address1.setAddressLine1("1-9,nuzvid");    
+    address1.setAddressLine1("1-9,madhuranagar");    
     address1.setCity("vijayawada");    
     address1.setState("ap");    
     address1.setCountry("India");    

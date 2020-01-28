@@ -2,7 +2,7 @@
     <wb-module deploy-name="Selection">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Selection"/>
         <property name="java-output-path" value="/Selection/build/classes"/>
+        <property name="context-root" value="Selection"/>
     </wb-module>
 </project-modules>
