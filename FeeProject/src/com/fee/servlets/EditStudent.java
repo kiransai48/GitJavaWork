@@ -17,7 +17,7 @@ public class EditStudent extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		
-		String rollno=request.getParameter("rollno");
+		int rollno=Integer.parseInt(request.getParameter("rollno"));
 		String name=request.getParameter("name");
 	 	String email=request.getParameter("email");
 		String course=request.getParameter("course");

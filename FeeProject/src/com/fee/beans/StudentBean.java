@@ -2,14 +2,14 @@ package com.fee.beans;
 
 
 public class StudentBean {
-private String rollno;
+private int rollno;
 private String name,email,course;
 private int fee,paid,due;
 private String address,contact;
 
 public StudentBean() {}
 
-public StudentBean(String rollno,String name, String email, String course, int fee, int paid, int due, String address,
+public StudentBean(int rollno,String name, String email, String course, int fee, int paid, int due, String address,
 		String contact) {
 	super();
 	this.rollno=rollno;
@@ -25,10 +25,10 @@ public StudentBean(String rollno,String name, String email, String course, int f
 
 
 
-public String getRollno() {
+public int getRollno() {
 	return rollno;
 }
-public void setRollno(String rollno) {
+public void setRollno(int rollno) {
 	this.rollno = rollno;
 }
 public String getName() {

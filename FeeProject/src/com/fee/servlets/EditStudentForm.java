@@ -16,7 +16,7 @@ public class EditStudentForm extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		String srollno=request.getParameter("rollno");
-		String rollno=(srollno);
+		int rollno=Integer.parseInt(srollno);
 		StudentBean bean=StudentDao.getRecordByRollno(rollno);
 		
 		out.println("<!DOCTYPE html>");

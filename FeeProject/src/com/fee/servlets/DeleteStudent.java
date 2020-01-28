@@ -12,7 +12,7 @@ import com.fee.dao.StudentDao;
 public class DeleteStudent extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String srollno=request.getParameter("rollno");
-		String rollno=(srollno);
+		int rollno=Integer.parseInt(srollno);
 		StudentDao.delete(rollno);
 		response.sendRedirect("ViewStudent");
 	}

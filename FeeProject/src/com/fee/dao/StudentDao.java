@@ -19,7 +19,7 @@ public static int save(StudentBean bean){
 		ps.setInt(6,bean.getDue());
 		ps.setString(7,bean.getAddress());
 		ps.setString(8,bean.getContact());
-		ps.setString(9,bean.getRollno());
+		ps.setInt(9,bean.getRollno());
 		status=ps.executeUpdate();
 		con.close();
 	}catch(Exception ex){System.out.println(ex);}
@@ -38,18 +38,18 @@ public static int update(StudentBean bean){
 		ps.setInt(6,bean.getDue());
 		ps.setString(7,bean.getAddress());
 		ps.setString(8,bean.getContact());
-		ps.setString(9,bean.getRollno());
+		ps.setInt(9,bean.getRollno());
 		status=ps.executeUpdate();
 		con.close();
 	}catch(Exception ex){System.out.println(ex);}
 	return status;
 }	
-public static int delete(String rollno){
+public static int delete(int rollno){
 	int status=0;
 	try{
 		Connection con=DB.getCon();
 		PreparedStatement ps=con.prepareStatement("delete from fee_student where rollno=?");
-		ps.setString(1,rollno);
+		ps.setInt(1,rollno);
 		status=ps.executeUpdate();
 		con.close();
 	}catch(Exception ex){System.out.println(ex);}
@@ -75,7 +75,7 @@ public static List<StudentBean> getAllRecords(){
 		ResultSet rs=ps.executeQuery();
 		while(rs.next()){
 			StudentBean bean=new StudentBean();
-			bean.setRollno(rs.getString(1));
+			bean.setRollno(rs.getInt(1));
 			bean.setName(rs.getString(2));
 			bean.setEmail(rs.getString(3));
 			bean.setCourse(rs.getString(4));
@@ -99,7 +99,7 @@ public static List<StudentBean> getDues(){
 		ResultSet rs=ps.executeQuery();
 		while(rs.next()){
 			StudentBean bean=new StudentBean();
-			bean.setRollno(rs.getString(1));
+			bean.setRollno(rs.getInt(1));
 			bean.setName(rs.getString(2));
 			bean.setEmail(rs.getString(3));
 			bean.setCourse(rs.getString(4));
@@ -116,15 +116,15 @@ public static List<StudentBean> getDues(){
 	return list;
 }
 
-public static StudentBean getRecordByRollno(String rollno){
+public static StudentBean getRecordByRollno(int rollno){
 	StudentBean bean=new StudentBean();
 	try{
 		Connection con=DB.getCon();
 		PreparedStatement ps=con.prepareStatement("select * from fee_student where rollno=?");
-		ps.setString(1,rollno);
+		ps.setInt(1,rollno);
 		ResultSet rs=ps.executeQuery();
 		while(rs.next()){
-			bean.setRollno(rs.getString(1));
+			bean.setRollno(rs.getInt(1));
 			bean.setName(rs.getString(2));
 			bean.setEmail(rs.getString(3));
 			bean.setCourse(rs.getString(4));

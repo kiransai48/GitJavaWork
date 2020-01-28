@@ -17,7 +17,7 @@ public class SearchStudent extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		String srollno=request.getParameter("rollno");
-		String rollno=(srollno);
+		int rollno=Integer.parseInt(srollno);
 		StudentBean bean=StudentDao.getRecordByRollno(rollno);
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
