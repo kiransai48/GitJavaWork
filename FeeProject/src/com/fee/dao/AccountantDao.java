@@ -12,7 +12,10 @@ import com.fee.beans.StudentBean;
 
 public class AccountantDao {
 	
-public static int save(AccountantBean bean){
+public static int save(AccountantBean bean)
+
+{
+	
 	int status=0;
 	try{
 		Connection con=DB.getCon();
